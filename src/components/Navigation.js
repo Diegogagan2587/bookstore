@@ -3,8 +3,8 @@ function Navigation() {
         <nav className="Navigation">
             <span>Bookstore CMS</span>
             <ul>
-                <li>BOOKS</li>
-                <li>CATEGORIES</li>
+                <li><a href={`/`}>BOOKS</a></li>
+                <li><a href={`/categories`}>CATEGORIES</a></li>
             </ul>
         </nav>
     )
