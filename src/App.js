@@ -12,7 +12,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-      <h1>My Place Holder</h1>
+      <RouterProvider router={router} >
     </div>
   );
 }
