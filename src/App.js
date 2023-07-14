@@ -5,14 +5,14 @@ import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h2>this is the root /</h2>,
+    element: <h1>this is the root /</h1>,
   }
 ])
 
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={router} >
+      <RouterProvider router={router} />
     </div>
   );
 }
