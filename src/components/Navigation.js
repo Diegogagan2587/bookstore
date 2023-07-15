@@ -1,6 +1,6 @@
 function Navigation() {
     return (
-        <nav className="Navigation">
+        <nav className="navigation">
             <span>Bookstore CMS</span>
             <ul>
                 <li><a href={`/`}>BOOKS</a></li>
