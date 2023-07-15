@@ -8,8 +8,7 @@ const InputBook = ({addBookItem}) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         if(title.trim() && author.trim()) {
-
-            addBookItem(title,author);
+            addBookItem({title,author});
             setTitle('');
             setAuthor('');
         } else {
