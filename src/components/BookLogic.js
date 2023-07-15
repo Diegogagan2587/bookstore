@@ -58,6 +58,13 @@ const BookLogic = () => {
     setBooks([...books, newBook]);
   };
 
+  return (
+    <>
+      <BookList bookProps={books} setBooks={setBooks} delBook={delBook} />
+      <hr />
+      <InputBook addBookItem={addBookItem} />
+    </>
+  );
   //end of BookLogic
 };
 
