@@ -1,15 +1,20 @@
 import BookItem from "./BookItem";
 
-const BookList = () => {
-    return (
-        <>
-        <ul className="book-list">
-            <h1>Books List Placeholder</h1>
-            {/* Here We will include books */}
-            <BookItem />
-        </ul>
-        </>
-    )
-}
+const BookList = ({ bookProps, setBooks, delBook }) => {
+  return (
+    <>
+      <ul className="book-list">
+        {bookProps.map((book) => (
+          <BookItem
+            key={book.id}
+            itemProp={book}
+            setBooks={setBooks}
+            delBook={delBook}
+          />
+        ))}
+      </ul>
+    </>
+  );
+};
 
 export default BookList;
