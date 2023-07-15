@@ -12,7 +12,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  <!-- - [🚀 Live Demo](#live-demo) -->
+    <!-- - [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -40,11 +40,12 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
->Do you want to know about the tech stack ?
+> Do you want to know about the tech stack ?
 
 <details>
   <summary>Client</summary>
   <ul>
+    <li><a href="https://reactrouter.com/en/main">React Router V6</a></li>
     <li><a href="https://reactjs.org/">React.js</a></li>
     <li><a href="https://developer.mozilla.org/es/docs/Web/HTML">HTML</a></li>
     <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">CSS</a></li>
@@ -90,6 +91,7 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need pre-installed:
+
 - Code Editor
 - node
 - npm
@@ -111,6 +113,7 @@ Install this project with:
   cd bookstore
   npm install
 ```
+
 ### Usage
 
 To run the project, execute the following command:
@@ -118,29 +121,29 @@ To run the project, execute the following command:
 ```sh
   npm run start
 ```
+
 or
 
 ```sh
   npm start
 ```
+
 previous command should start running the project on a local server.
 
 ### Run tests
 
 To run tests, run the following command:
 
-
 ```sh
   npm test
 ```
-At this moments, there is no test availabe but you can add your own if you want within the file:
- `app.test.js`
 
+At this moments, there is no test availabe but you can add your own if you want within the file:
+`app.test.js`
 
 ### Deployment
 
 You can deploy this project using:
-
 
 ```sh
     npm run build
@@ -191,7 +194,7 @@ Feel free to check the [issues page](https://github.com/Diegogagan2587/bookstore
 
 > Do you want to be part of this project?
 
-If you like this project and have suggestion feel free to contact me at diego27796gagan@gmail.com 
+If you like this project and have suggestion feel free to contact me at diego27796gagan@gmail.com
 or take a look into the issues page and add a suggestion!
 Star this project if you like it!
 
