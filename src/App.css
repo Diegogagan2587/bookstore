@@ -1,13 +1,11 @@
 /* ---- start Navigation ---- */
 .navigation {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
 .navigation ul {
-  border: 1px green solid;
   display: flex;
   width: 30%;
   justify-content: space-evenly;
@@ -17,7 +15,6 @@
 
 /* ---- start Book Item ---- */
 .book-container {
-  border: 1px solid green;
   display: flex;
   align-items: center;
   justify-content: space-between;
