@@ -1,18 +1,16 @@
 const BookItem = ({ itemProp, setBooks, delBook }) => {
-
   return (
     <li className="book-container">
       <div className="book-info">
         <span className="genre">Science Fiction</span>
-        <h3 className="title">Dune</h3>
-        <span className="author">Frank Herbert</span>
+        <h3 className="title">{itemProp.title}</h3>
+        <span className="author">{itemProp.author}</span>
         <div className="edit-info">
           <button>Comments</button>
           <hr />
-          <button 
-          type="button"
-          onClick={() => delBook(itemProp.id)}
-           >Remove</button>
+          <button type="button" onClick={() => delBook(itemProp.id)}>
+            Remove
+          </button>
           <hr />
           <button>Edit</button>
         </div>
@@ -24,7 +22,7 @@ const BookItem = ({ itemProp, setBooks, delBook }) => {
       <div className="chapter">
         <span>CURRENT CHAPTER</span>
         <span>Chapter 17</span>
-        <button>UPDATE PROGRESS</button>        
+        <button>UPDATE PROGRESS</button>
       </div>
     </li>
   );
