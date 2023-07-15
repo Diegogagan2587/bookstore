@@ -32,3 +32,11 @@ const BookLogic = () => {
     },
   ]);
 
+  const delBook = (id) => {
+    setBooks([
+      ...books.filter((book) => {
+        return book.id !== id;
+      }),
+    ]);
+  };
+
