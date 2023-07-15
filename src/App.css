@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+/* ---- start Navigation ---- */
+.navigation {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navigation ul {
+  border: 1px green solid;
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+}
+/* ---- start Navigation ---- */
+/* ---- start Book Item ---- */
+.book-container {
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.book-container .book-info {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.book-info .edit-info {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book-container .progress {
+  flex: 1;
 }
+
+.book-container .chapter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* ---- Ends Book Item ---- */
