@@ -40,3 +40,25 @@ const BookLogic = () => {
     ]);
   };
 
+  const addBookItem = ({
+    category,
+    title,
+    author,
+    completed,
+    currentChapter,
+  }) => {
+    const newBook = {
+      id: uuidv4(),
+      category: category,
+      title: title,
+      author: author,
+      completed: completed,
+      currentChapter: currentChapter,
+    };
+    setBooks([...books, newBook]);
+  };
+
+  //end of BookLogic
+};
+
+export default BookLogic;
