@@ -1,42 +1,40 @@
-import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import BookList from "./BookList";
-import InputBook from "./InputBook";
-//Placeholder for importing
+import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import BookList from './BookList';
+import InputBook from './InputBook';
+// Placeholder for importing
 
 const BookLogic = () => {
   const [books, setBooks] = useState([
     {
       id: uuidv4(),
-      category: "action",
-      title: "The Hunger Games",
-      author: "Suzanne Collins",
+      category: 'action',
+      title: 'The Hunger Games',
+      author: 'Suzanne Collins',
       completed: 64,
-      currentChapter: "Chapter 17",
+      currentChapter: 'Chapter 17',
     },
     {
       id: uuidv4(),
-      category: "action",
-      title: "The Hunger Games",
-      author: "Suzanne Collins",
+      category: 'action',
+      title: 'The Hunger Games',
+      author: 'Suzanne Collins',
       completed: 64,
-      currentChapter: "Chapter 3: A Lesson Learned",
+      currentChapter: 'Chapter 3: A Lesson Learned',
     },
     {
       id: uuidv4(),
-      category: "action",
-      title: "The Hunger Games",
-      author: "Suzanne Collins",
+      category: 'action',
+      title: 'The Hunger Games',
+      author: 'Suzanne Collins',
       completed: 64,
-      currentChapter: "Introduction",
+      currentChapter: 'Introduction',
     },
   ]);
 
   const delBook = (id) => {
     setBooks([
-      ...books.filter((book) => {
-        return book.id !== id;
-      }),
+      ...books.filter((book) => book.id !== id),
     ]);
   };
 
@@ -49,11 +47,11 @@ const BookLogic = () => {
   }) => {
     const newBook = {
       id: uuidv4(),
-      category: category,
-      title: title,
-      author: author,
-      completed: completed,
-      currentChapter: currentChapter,
+      category,
+      title,
+      author,
+      completed,
+      currentChapter,
     };
     setBooks([...books, newBook]);
   };
@@ -65,7 +63,7 @@ const BookLogic = () => {
       <InputBook addBookItem={addBookItem} />
     </>
   );
-  //end of BookLogic
+  // end of BookLogic
 };
 
 export default BookLogic;

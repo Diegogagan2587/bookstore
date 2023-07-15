@@ -12,7 +12,9 @@
   width: 30%;
   justify-content: space-evenly;
 }
+
 /* ---- start Navigation ---- */
+
 /* ---- start Book Item ---- */
 .book-container {
   border: 1px solid green;
@@ -40,4 +42,5 @@
   display: flex;
   flex-direction: column;
 }
+
 /* ---- Ends Book Item ---- */

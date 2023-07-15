@@ -1,20 +1,18 @@
-
 import './App.css';
-import { createBrowserRouter, RouterProvider,} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import BookLogic from './components/BookLogic';
 
-
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <BookLogic />,
   },
   {
-    path: "/categories",
+    path: '/categories',
     element: <h1>Placeholder for categories Section</h1>,
-  }
-])
+  },
+]);
 
 function App() {
   return (
