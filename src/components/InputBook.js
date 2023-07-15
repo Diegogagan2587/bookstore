@@ -40,7 +40,7 @@ const InputBook = ({ addBookItem }) => {
           onChange={handleChangeAuthor}
           value={author}
         />
-        <button type="button">Add Book</button>
+        <button type="submit">Add Book</button>
       </form>
       <span className="warning">{message}</span>
     </>
