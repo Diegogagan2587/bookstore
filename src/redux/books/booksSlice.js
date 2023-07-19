@@ -13,7 +13,7 @@ const booksSlice = createSlice({
       }
     },
     removeBook: (state, action) => {
-      state.map((book)=>{
+      state = state.map((book)=>{
         if(book.id !== action.payload) {
           return book;
         }
