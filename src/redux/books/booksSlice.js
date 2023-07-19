@@ -7,12 +7,13 @@ const booksSlice = createSlice({
   initialState,
   reducers: {
     addBook: () => {
-        console.log('will add a book')
+      console.log("will add a book");
     },
     removeBook: () => {
-        console.log('will remove a book')
-    }
+      console.log("will remove a book");
+    },
   },
 });
 
-export const { addBook, }
+export const { addBook, removeBook } = booksSlice.actions;
+export default booksSlice.reducer;
