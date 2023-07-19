@@ -6,11 +6,18 @@ const booksSlice = createSlice({
   name: "books",
   initialState,
   reducers: {
-    addBook: () => {
-      console.log("will add a book");
+    addBook: (state,action) => {
+      state = {
+        ...state,
+        action.payload,
+      }
     },
-    removeBook: () => {
-      console.log("will remove a book");
+    removeBook: (state, action) => {
+      state.map((book)=>{
+        if(book.id !== action.payload) {
+          return book;
+        }
+      })
     },
   },
 });
