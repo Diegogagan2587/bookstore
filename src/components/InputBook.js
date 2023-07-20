@@ -1,20 +1,28 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/booksSlice';
 
-const InputBook = ({ addBookItem }) => {
+const InputBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [message, setMessage] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (title.trim() && author.trim()) {
-      addBookItem({ title, author });
+      const newBook = {
+        item_id: uuidv4,
+        title,
+        author,
+        category: 'Pending Classification',
+      };
       setTitle('');
       setAuthor('');
-    } else {
-      setMessage('Please fill all fields!');
+      dispatch(addBook(newBook));
     }
+    setMessage('Please fill all fields!');
   };
 
   const handleChangeTitle = (event) => {
@@ -45,10 +53,6 @@ const InputBook = ({ addBookItem }) => {
       <span className="warning">{message}</span>
     </>
   );
-};
-
-InputBook.propTypes = {
-  addBookItem: PropTypes.func.isRequired,
 };
 
 export default InputBook;
