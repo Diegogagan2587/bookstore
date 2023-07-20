@@ -4,7 +4,6 @@ import BookItem from './BookItem';
 
 const BookList = ({ setBooks, delBook }) => {
   const books = useSelector((state) => state.books);
-  console.log('Accessing Store and Getting Books', books);
   return (
     <>
       <ul className="book-list">
@@ -22,11 +21,6 @@ const BookList = ({ setBooks, delBook }) => {
 };
 
 BookList.propTypes = {
-  bookProps: PropTypes.arrayOf([
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    }),
-  ]).isRequired,
   setBooks: PropTypes.func.isRequired,
   delBook: PropTypes.func.isRequired,
 };
