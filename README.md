@@ -62,11 +62,12 @@
 
 ### Key Features <a name="key-features"></a>
 
-> This website will allow to:
+> This website include the next features:
 
 - **Display a list of books**
 - **Add a book**
 - **Remove a selected book**
+- **Make use of global state management with redux-toolkit**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,9 +173,8 @@ You can deploy this project using:
 > This is a work in progress so we will implement the next features in the future:
 
 - [ ] **A nice design**
-- [ ] **make use of reducers and actions**
-- [ ] **use of Redux in React components**
 - [ ] **Implement connection to an API**
+- [ ] **Implement editable category laber**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
