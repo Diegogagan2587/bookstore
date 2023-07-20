@@ -13,7 +13,7 @@ const InputBook = () => {
     event.preventDefault();
     if (title.trim() && author.trim()) {
       const newBook = {
-        item_id: uuidv4,
+        item_id: uuidv4(),
         title,
         author,
         category: 'Pending Classification',
