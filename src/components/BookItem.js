@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 const BookItem = ({ itemProp, delBook }) => (
   <li className="book-container">
     <div className="book-info">
-      <span className="genre">Science Fiction</span>
+      <span className="genre">{itemProp.category}</span>
       <h3 className="title">{itemProp.title}</h3>
       <span className="author">{itemProp.author}</span>
       <div className="edit-info">
         <button type="button">Comments</button>
         <hr />
-        <button type="button" onClick={() => delBook(itemProp.id)}>
+        <button type="button" onClick={() => delBook(itemProp.item_id)}>
           Remove
         </button>
         <hr />
@@ -30,9 +30,10 @@ const BookItem = ({ itemProp, delBook }) => (
 
 BookItem.propTypes = {
   itemProp: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
   delBook: PropTypes.func.isRequired,
 };

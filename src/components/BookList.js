@@ -1,20 +1,25 @@
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 
-const BookList = ({ bookProps, setBooks, delBook }) => (
-  <>
-    <ul className="book-list">
-      {bookProps.map((book) => (
-        <BookItem
-          key={book.id}
-          itemProp={book}
-          setBooks={setBooks}
-          delBook={delBook}
-        />
-      ))}
-    </ul>
-  </>
-);
+const BookList = ({ setBooks, delBook }) => {
+  const books = useSelector((state) => state.books);
+  console.log('Accessing Store and Getting Books', books);
+  return (
+    <>
+      <ul className="book-list">
+        {books.map((book) => (
+          <BookItem
+            key={book.item_id}
+            itemProp={book}
+            setBooks={setBooks}
+            delBook={delBook}
+          />
+        ))}
+      </ul>
+    </>
+  );
+};
 
 BookList.propTypes = {
   bookProps: PropTypes.arrayOf([
