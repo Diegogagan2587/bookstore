@@ -32,6 +32,7 @@ const submitBooks = async (book) => {
 fetchBooks(); //----Remove After Debuggin or befor commit!----//
 
 const getBooksFromAPI = createAsyncThunk('books/fetch', fetchBooks);
+const postBooksToAPI = createAsyncThunk('books/post', submitBooks);
 
 const initialState = [
   {
@@ -63,6 +64,15 @@ const booksSlice = createSlice({
     },
     removeBook: (state = initialState, action) =>
       state.filter((book) => book.item_id !== action.payload.item_id),
+  },
+  extraReducers: (builder) => {
+    builder.addCase(getBooksFromAPI.fulfilled, (sate, action) => {
+      console.log('builder.addCaset(getBooksFromAPI),');
+      state = [...action.payload.data];
+    });
+    builder.addCase(postBooksToAPI.fulfilled,(state, action)=>{
+      console.log("Logic for submitting books goes here");
+    });
   },
 });
 
