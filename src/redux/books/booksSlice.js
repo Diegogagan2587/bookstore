@@ -16,7 +16,9 @@ const fetchBooks = async (thunkAPI) => {
 };
 
 const submitBooks = async (book) => {
-  const { item_id, title, author, category } = book;
+  const {
+    item_id, title, author, category,
+  } = book;
   try {
     const response = await axios.post(urlAPI, {
       item_id,
@@ -29,6 +31,14 @@ const submitBooks = async (book) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 };
+/*
+submitBooks(  {
+  item_id: 'item7',
+  title: 'The Great Gatsby',
+  author: 'John Smith',
+  category: 'Fiction',
+}); */
+//remove after debuggin---------------------->>>>>>>>>>
 
 const getBooksFromAPI = createAsyncThunk('books/fetch', fetchBooks);
 const postBooksToAPI = createAsyncThunk('books/post', submitBooks);
@@ -61,8 +71,10 @@ const booksSlice = createSlice({
     addBook: (state = initialState, action) => {
       state.push(action.payload);
     },
-    removeBook: (state = initialState, action) =>
-      state.filter((book) => book.item_id !== action.payload.item_id),
+    removeBook: (state = initialState, action) => {
+      axios.delete(`${urlAPI}/${action.payload.item_id}`);
+      return state.filter((book) => book.item_id !== action.payload.item_id);
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getBooksFromAPI.fulfilled, (state, action) => {
@@ -71,7 +83,7 @@ const booksSlice = createSlice({
         (bookArr, index) => ({
           ...bookArr[0],
           item_id: Object.keys(arrFromAction)[index],
-        })
+        }),
       );
       console.log('array of books inside extraReducer', arrayOFBooks);
       state.splice(0, state.length, ...arrayOFBooks);
