@@ -1,17 +1,35 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const appID = 'lFZeV4dpbBKDSSANp21d';
+const urlAPI = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`;
+
 const fetchBooks = async (thunkAPI) => {
-  const app_id = 'lFZeV4dpbBKDSSANp21d';
-  const url_api = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${app_id}/books`;
   try {
-    const response = await axios.get(url_api);
-    console.log('fetchBooks will return =',response)
+    const response = await axios.get(urlAPI);
+    console.log('fetchBooks will return =', response);
     return response;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
 };
+
+const submitBooks = async (book) => {
+  const { item_id, title, author, category } = book;
+  try {
+    const response = await axios.post(urlAPI, {
+      item_id,
+      title,
+      author,
+      category,
+    });
+    console.log('submitBooks will response =', response);
+  } catch (erro) {
+    return thunkAPI.rejectWithValue(error.message);
+  }
+};
+
+fetchBooks(); //----Remove After Debuggin or befor commit!----//
 
 const getBooksFromAPI = createAsyncThunk('books/fetch', fetchBooks);
 
