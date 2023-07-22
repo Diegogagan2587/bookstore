@@ -3,9 +3,11 @@ import axios from 'axios';
 
 const fetchBooks = async (thunkAPI) => {
   const app_id = 'lFZeV4dpbBKDSSANp21d';
-  const url_api = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${app_id}/`;
+  const url_api = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${app_id}/books`;
   try {
-    //Here I need to fetch data  and assing a response;
+    const response = await axios.get(url_api);
+    console.log('fetchBooks will return =',response)
+    return response;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
