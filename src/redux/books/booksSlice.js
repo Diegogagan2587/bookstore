@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { object } from 'prop-types';
 
 const appID = 'lFZeV4dpbBKDSSANp21d';
 const urlAPI = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`;
@@ -7,7 +8,7 @@ const urlAPI = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/books
 const fetchBooks = async (thunkAPI) => {
   try {
     const response = await axios.get(urlAPI);
-    console.log('fetchBooks will return =', response);
+    console.log('fetchBooks will return----->', response);
     return response;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
@@ -28,8 +29,6 @@ const submitBooks = async (book) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 };
-
-fetchBooks(); //----Remove After Debuggin or befor commit!----//
 
 const getBooksFromAPI = createAsyncThunk('books/fetch', fetchBooks);
 const postBooksToAPI = createAsyncThunk('books/post', submitBooks);
@@ -66,16 +65,23 @@ const booksSlice = createSlice({
       state.filter((book) => book.item_id !== action.payload.item_id),
   },
   extraReducers: (builder) => {
-    builder.addCase(getBooksFromAPI.fulfilled, (sate, action) => {
-      console.log('builder.addCaset(getBooksFromAPI),');
-      state = [...action.payload.data];
+    builder.addCase(getBooksFromAPI.fulfilled, (state, action) => {
+      const arrFromAction = { ...action.payload.data };
+      const arrayOFBooks = Object.values(arrFromAction).map(
+        (bookArr, index) => ({
+          ...bookArr[0],
+          item_id: Object.keys(arrFromAction)[index],
+        })
+      );
+      console.log('array of books inside extraReducer', arrayOFBooks);
+      state.splice(0, state.length, ...arrayOFBooks);
     });
-    builder.addCase(postBooksToAPI.fulfilled,(state, action)=>{
-      console.log("Logic for submitting books goes here");
+    builder.addCase(postBooksToAPI.fulfilled, (state, action) => {
+      console.log('Logic for submitting books goes here');
     });
   },
 });
 
 export { getBooksFromAPI };
-export const { addBook, removeBook } = booksSlice.actions;
+export const { addBook, removeBook, extraReducers } = booksSlice.actions;
 export default booksSlice.reducer;
