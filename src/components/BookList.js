@@ -1,5 +1,9 @@
+// import libraries
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+// import compoenents
+import { getBooksFromAPI } from '../redux/books/booksSlice';
 import BookItem from './BookItem';
 
 const BookList = ({ setBooks, delBook }) => {
