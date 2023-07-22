@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const fetchBooks = async (thunkAPI) => {
   const app_id = 'lFZeV4dpbBKDSSANp21d';
