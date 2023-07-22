@@ -1,5 +1,11 @@
 import { createSlice,createAsyncThunk } from '@reduxjs/toolkit';
 
+const fetchBooks = async (thunkAPI) => {
+  
+}
+
+const getBooksFromAPI = createAsyncThunk('books/fetch',fetchBooks);
+
 const initialState = [
   {
     item_id: 'item1',
