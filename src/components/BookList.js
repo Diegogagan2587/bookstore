@@ -7,7 +7,13 @@ import { getBooksFromAPI } from '../redux/books/booksSlice';
 import BookItem from './BookItem';
 
 const BookList = ({ setBooks, delBook }) => {
+  const dispatch = useDispatch();
   const books = useSelector((state) => state.books);
+
+  useEffect(() => {
+    dispatch(getBooksFromAPI());
+  }, []);
+
   return (
     <>
       <ul className="book-list">
