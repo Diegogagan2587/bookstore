@@ -27,7 +27,7 @@ const submitBooks = async (book) => {
     });
     return response;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    return error.message;
   }
 };
 
