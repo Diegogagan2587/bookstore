@@ -42,12 +42,14 @@ const InputBook = () => {
           placeholder="Book Title"
           onChange={handleChangeTitle}
           value={title}
+          className="input-title"
         />
         <input
           type="text"
           placeholder="Author"
           onChange={handleChangeAuthor}
           value={author}
+          className="input-author"
         />
         <button type="submit">Add Book</button>
       </form>

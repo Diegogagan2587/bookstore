@@ -184,10 +184,42 @@ button {
 }
 
 /* ---- Ends Book Item ---- */
-
-.form-container {
+.form-head {
+  margin-top: 2vw;
+  color: #888888;
+  padding-left: 7.14vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.42vw;
+}
+form {
+  padding-left: 4vw;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
-  flex-direction: column;
-  position: relative;
-  border: 1px solid red;
+  justify-content: space-evenly;
+}
+
+form input {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  font-size: 1.14vw;
+  padding: 1%;
+}
+
+form .input-title{
+  width: 47.42vw;
+  
+}
+
+form .input-author {
+  width: 20.35vw;
+}
+
+form button {
+  width: 13vw;
+  color: #fff;
+  background-color: #0290ff;
+  border: 0px;
+  border-radius: 2px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.92vw;
 }
