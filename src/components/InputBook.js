@@ -51,7 +51,7 @@ const InputBook = () => {
           value={author}
           className="input-author"
         />
-        <button type="submit">Add Book</button>
+        <button type="submit" className="form-button">Add Book</button>
       </form>
       <span className="warning">{message}</span>
     </>

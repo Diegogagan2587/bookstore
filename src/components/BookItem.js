@@ -14,7 +14,7 @@ const BookItem = ({ itemProp }) => {
           <button type="button">Comments</button>
           <hr />
           <button
-          className="center-button"
+            className="center-button"
             type="button"
             onClick={() => dispatch(removeBook(itemProp, itemProp.item_id))}
           >

@@ -122,6 +122,9 @@ button {
 .book-container .progress {
   display: flex;
   flex-direction: column;
+  width: fit-content;
+  border-right: 1px solid #e8e8e8;
+  padding-right: 1%;
 }
 
 .progress .progress-indicator {
@@ -147,12 +150,6 @@ button {
   border-right: 1px solid #e8e8e8;
 }
 
-.book-container .progress {
-  width: fit-content;
-  border-right: 1px solid #e8e8e8;
-  padding-right: 1%;
-}
-
 .book-container .chapter {
   flex: 1;
   display: flex;
@@ -164,7 +161,7 @@ button {
   font-family: 'Roboto Slab', serif;
   font-size: 0.929vw;
   color: #12121280;
-  margin-bottom: 0.50vw;
+  margin-bottom: 0.5vw;
 }
 
 .chapter .chap-progress {
@@ -180,17 +177,18 @@ button {
   color: #fff;
   background-color: #0290ff;
   border: 0;
-  padding: 0.50vw 1.357vw 0.57vw;
+  padding: 0.5vw 1.357vw 0.57vw;
 }
 
 /* ---- Ends Book Item ---- */
 .form-head {
   margin-top: 2vw;
-  color: #888888;
+  color: #888;
   padding-left: 7.14vw;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.42vw;
 }
+
 form {
   padding-left: 4vw;
   font-family: 'Montserrat', sans-serif;
@@ -205,20 +203,19 @@ form input {
   padding: 1%;
 }
 
-form .input-title{
+form .input-title {
   width: 47.42vw;
-  
 }
 
 form .input-author {
   width: 20.35vw;
 }
 
-form button {
+.form-button {
   width: 13vw;
   color: #fff;
   background-color: #0290ff;
-  border: 0px;
+  border: 0;
   border-radius: 2px;
   font-family: 'Roboto Slab', serif;
   font-size: 0.92vw;
