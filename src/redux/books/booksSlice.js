@@ -16,11 +16,11 @@ const fetchBooks = async (thunkAPI) => {
 
 const submitBooks = async (book) => {
   const {
-    item_id, title, author, category,
+    item_id: itemID, title, author, category,
   } = book;
   try {
     const response = await axios.post(urlAPI, {
-      item_id,
+      item_id: itemID,
       title,
       author,
       category,
