@@ -1,13 +1,12 @@
-
 a {
   text-decoration: none;
 }
 
-ul{
+ul {
   padding-left: 0;
 }
 
-li{
+li {
   list-style: none;
 }
 
@@ -16,18 +15,18 @@ button {
 }
 
 .oval-container {
-  margin-left: 0.78vw ;
+  margin-left: 0.78vw;
   margin-right: 0.78vw;
 }
 
 .oval-2 {
-    width: 4.85vw;
-    height: 4.85vw;
-    border-style: solid;
-    border-width: 5px;
-    border-image-slice: 1;
-    border-radius: 100%;
-    border-color: #0290ff;
+  width: 4.85vw;
+  height: 4.85vw;
+  border-style: solid;
+  border-width: 5px;
+  border-image-slice: 1;
+  border-radius: 100%;
+  border-color: #0290ff;
 }
 
 /* ---- start Navigation ---- */
@@ -43,7 +42,7 @@ button {
 .navigation .book-cms {
   font-family: 'Montserrat', sans-serif;
   color: #0290ff;
-  font-size: 2.14VW;
+  font-size: 2.14vw;
   font-weight: bold;
 }
 
@@ -56,7 +55,7 @@ button {
 .navigation ul .nav-text {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
-  font-size: 0.929VW;
+  font-size: 0.929vw;
   color: #121212;
 }
 
@@ -77,7 +76,8 @@ button {
 }
 
 .book-container {
-  border: red 1px solid;
+  border: #e8e8e8 1px solid;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   padding-top: 2.28vw;
@@ -98,7 +98,7 @@ button {
   color: #12121280;
 }
 
-.book-info .title{
+.book-info .title {
   font-family: 'Roboto Slab', serif;
   font-size: 1.57vw;
   color: #121212;
@@ -120,7 +120,7 @@ button {
   width: 15.8vw;
 }
 
-.book-container .progress{
+.book-container .progress {
   display: flex;
   flex-direction: column;
 }
@@ -133,6 +133,7 @@ button {
 .progress .status-indicator {
   font-family: 'Montserrat', sans-serif;
   font-size: 1vw;
+  color: #12121280;
 }
 
 .edit-info button {
@@ -163,20 +164,27 @@ button {
 .chapter .chap-head {
   font-family: 'Roboto Slab', serif;
   font-size: 0.929vw;
+  color: #12121280;
+  margin-bottom: 0.50vw;
 }
 
 .chapter .chap-progress {
   font-family: 'Roboto Slab', serif;
   font-size: 1.14vw;
+  color: #121212;
+  margin-bottom: 2.13vw;
 }
 
 .chapter button {
   font-size: 0.929vw;
   width: 13.14vw;
+  color: #fff;
+  background-color: #0290ff;
+  border: 0;
+  padding: 0.50vw 1.357vw 0.57vw;
 }
 
 /* ---- Ends Book Item ---- */
-
 
 /*Remove below after Debuggin*/
 
