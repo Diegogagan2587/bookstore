@@ -15,7 +15,9 @@ const fetchBooks = async (thunkAPI) => {
 };
 
 const submitBooks = async (book) => {
-  const { item_id, title, author, category } = book;
+  const {
+    item_id, title, author, category,
+  } = book;
   try {
     const response = await axios.post(urlAPI, {
       item_id,
@@ -54,7 +56,7 @@ const booksSlice = createSlice({
         (bookArr, index) => ({
           ...bookArr[0],
           item_id: Object.keys(arrFromAction)[index],
-        })
+        }),
       );
       console.log('array of books inside extraReducer', arrayOFBooks);
       state.splice(0, state.length, ...arrayOFBooks);
