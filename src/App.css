@@ -71,7 +71,6 @@ button {
   padding-left: 7.14vw;
   padding-right: 7.14vw;
   padding-top: 2.71vw;
-  height: 12.14vw;
   background-color: #fafafa;
 }
 
@@ -186,12 +185,9 @@ button {
 
 /* ---- Ends Book Item ---- */
 
-/*Remove below after Debuggin*/
-
-form {
-  display: none;
-}
-
-.form-head {
-  display: none;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid red;
 }
