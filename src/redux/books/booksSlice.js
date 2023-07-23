@@ -7,7 +7,7 @@ const urlAPI = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/books
 const fetchBooks = async (thunkAPI) => {
   try {
     const response = await axios.get(urlAPI);
-    console.log('fetchBooks will return----->', response);
+
     return response;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
@@ -25,7 +25,6 @@ const submitBooks = async (book) => {
       author,
       category,
     });
-    console.log('submitBooks will response =', response);
   } catch (erro) {
     return thunkAPI.rejectWithValue(error.message);
   }
@@ -58,11 +57,11 @@ const booksSlice = createSlice({
           item_id: Object.keys(arrFromAction)[index],
         }),
       );
-      console.log('array of books inside extraReducer', arrayOFBooks);
+
       state.splice(0, state.length, ...arrayOFBooks);
     });
     builder.addCase(postBooksToAPI.fulfilled, (state, action) => {
-      console.log('Logic for submitting books goes here');
+
     });
   },
 });
