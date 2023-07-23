@@ -15,6 +15,21 @@ button {
   font-family: 'Roboto Slab', serif;
 }
 
+.oval-container {
+  margin-left: 0.78vw ;
+  margin-right: 0.78vw;
+}
+
+.oval-2 {
+    width: 4.85vw;
+    height: 4.85vw;
+    border-style: solid;
+    border-width: 5px;
+    border-image-slice: 1;
+    border-radius: 100%;
+    border-color: #0290ff;
+}
+
 /* ---- start Navigation ---- */
 .navigation {
   background-color: #fff;
@@ -89,6 +104,7 @@ button {
   color: #121212;
   margin-top: 0.285vw;
   margin-bottom: 0;
+  width: 34vw;
 }
 
 .book-info .author {
@@ -126,14 +142,22 @@ button {
   font-size: 1vw;
 }
 
+.edit-info .center-button {
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+}
+
 .book-container .progress {
-  flex: 1;
+  width: fit-content;
+  border-right: 1px solid #e8e8e8;
+  padding-right: 1%;
 }
 
 .book-container .chapter {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding-left: 4.21vw;
 }
 
 .chapter .chap-head {
@@ -148,6 +172,7 @@ button {
 
 .chapter button {
   font-size: 0.929vw;
+  width: 13.14vw;
 }
 
 /* ---- Ends Book Item ---- */

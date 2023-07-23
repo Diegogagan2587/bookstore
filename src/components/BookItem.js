@@ -14,6 +14,7 @@ const BookItem = ({ itemProp }) => {
           <button type="button">Comments</button>
           <hr />
           <button
+          className="center-button"
             type="button"
             onClick={() => dispatch(removeBook(itemProp, itemProp.item_id))}
           >
@@ -23,10 +24,14 @@ const BookItem = ({ itemProp }) => {
           <button type="button">Edit</button>
         </div>
       </div>
+      <div className="oval-container">
+        <div className="oval-2" />
+      </div>
       <div className="progress">
         <span className="progress-indicator">64%</span>
         <span className="status-indicator">Completed</span>
       </div>
+      <hr />
       <div className="chapter">
         <span className="chap-head">CURRENT CHAPTER</span>
         <span className="chap-progress">Chapter 17</span>
