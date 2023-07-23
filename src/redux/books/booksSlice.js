@@ -25,7 +25,8 @@ const submitBooks = async (book) => {
       author,
       category,
     });
-  } catch (erro) {
+    return response;
+  } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
 };
