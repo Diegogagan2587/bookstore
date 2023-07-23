@@ -1,14 +1,48 @@
+
+a {
+  text-decoration: none;
+}
+
+ul{
+  padding-left: 0;
+}
+
+li{
+  list-style: none;
+}
+
 /* ---- start Navigation ---- */
 .navigation {
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding-left: 7.14vw;
+  padding-right: 7.07vw;
+}
+
+.navigation .book-cms {
+  font-family: 'Montserrat', sans-serif;
+  color: #0290ff;
+  font-size: 2.14VW;
+  font-weight: bold;
 }
 
 .navigation ul {
   display: flex;
   width: 30%;
   justify-content: space-evenly;
+}
+
+.navigation ul .nav-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 0.929VW;
+  color: #121212;
+}
+
+.navigation ul .nav-text:hover {
+  color: #12121280;
 }
 
 /* ---- start Navigation ---- */
