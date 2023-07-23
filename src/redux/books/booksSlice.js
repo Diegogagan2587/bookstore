@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { object } from 'prop-types';
 
 const appID = 'lFZeV4dpbBKDSSANp21d';
 const urlAPI = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`;
@@ -16,9 +15,7 @@ const fetchBooks = async (thunkAPI) => {
 };
 
 const submitBooks = async (book) => {
-  const {
-    item_id, title, author, category,
-  } = book;
+  const { item_id, title, author, category } = book;
   try {
     const response = await axios.post(urlAPI, {
       item_id,
@@ -31,14 +28,6 @@ const submitBooks = async (book) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 };
-/*
-submitBooks(  {
-  item_id: 'item7',
-  title: 'The Great Gatsby',
-  author: 'John Smith',
-  category: 'Fiction',
-}); */
-//remove after debuggin---------------------->>>>>>>>>>
 
 const getBooksFromAPI = createAsyncThunk('books/fetch', fetchBooks);
 const postBooksToAPI = createAsyncThunk('books/post', submitBooks);
@@ -83,7 +72,7 @@ const booksSlice = createSlice({
         (bookArr, index) => ({
           ...bookArr[0],
           item_id: Object.keys(arrFromAction)[index],
-        }),
+        })
       );
       console.log('array of books inside extraReducer', arrayOFBooks);
       state.splice(0, state.length, ...arrayOFBooks);
@@ -94,6 +83,6 @@ const booksSlice = createSlice({
   },
 });
 
-export { getBooksFromAPI };
+export { getBooksFromAPI, postBooksToAPI };
 export const { addBook, removeBook, extraReducers } = booksSlice.actions;
 export default booksSlice.reducer;

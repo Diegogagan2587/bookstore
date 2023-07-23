@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/booksSlice';
+import { addBook, postBooksToAPI } from '../redux/books/booksSlice';
 
 const InputBook = () => {
   const [title, setTitle] = useState('');
@@ -21,6 +21,7 @@ const InputBook = () => {
       setTitle('');
       setAuthor('');
       dispatch(addBook(newBook));
+      dispatch(postBooksToAPI(newBook));
     }
     setMessage('Please fill all fields!');
   };
