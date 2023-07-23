@@ -12,7 +12,7 @@ const BookList = ({ setBooks, delBook }) => {
 
   useEffect(() => {
     dispatch(getBooksFromAPI());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
