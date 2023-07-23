@@ -48,7 +48,17 @@ li{
 /* ---- start Navigation ---- */
 
 /* ---- start Book Item ---- */
+
+.book-list {
+  padding-left: 7.14vw;
+  padding-right: 7.14vw;
+  padding-top: 2.71vw;
+  height: 12.14vw;
+  background-color: #fafafa;
+}
+
 .book-container {
+  border: red 1px solid;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,8 +70,45 @@ li{
   flex-direction: column;
 }
 
+.book-info .genre {
+  font-size: 1vw;
+  color: #12121280;
+}
+
+.book-info .title{
+  font-size: 1.57vw;
+  color: #121212;
+}
+
+.book-info .author {
+  font-family: 'Roboto Slab', serif;
+  font-weight: lighter;
+  font-size: 1vw;
+  color: #4386bf;
+}
+
 .book-info .edit-info {
   display: flex;
+}
+
+.book-container .progress{
+  display: flex;
+  flex-direction: column;
+}
+
+.progress .progress-indicator {
+  font-size: 2.28vw;
+}
+
+.progress .status-indicator {
+  font-size: 1vw;
+}
+
+.edit-info button {
+  border: 0;
+  background-color: inherit;
+  color: #4386bf;
+  font-size: 1vw;
 }
 
 .book-container .progress {
@@ -74,4 +121,26 @@ li{
   flex-direction: column;
 }
 
+.chapter .chap-head {
+  font-size: 0.929vw;
+}
+
+.chapter .chap-progress {
+  font-size: 1.14vw;
+}
+
+.chapter button {
+  font-size: 0.929vw;
+}
+
 /* ---- Ends Book Item ---- */
+
+
+/*Remove below after Debuggin*/
+form {
+  display: none;
+}
+
+.form-head {
+  display: none;
+}
