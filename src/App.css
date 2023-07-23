@@ -11,6 +11,10 @@ li{
   list-style: none;
 }
 
+button {
+  font-family: 'Roboto Slab', serif;
+}
+
 /* ---- start Navigation ---- */
 .navigation {
   background-color: #fff;
@@ -61,7 +65,10 @@ li{
   border: red 1px solid;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding-top: 2.28vw;
+  padding-left: 1.92vw;
+  padding-bottom: 2vw;
+  margin-bottom: 1.25%;
 }
 
 .book-container .book-info {
@@ -71,11 +78,13 @@ li{
 }
 
 .book-info .genre {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1vw;
   color: #12121280;
 }
 
 .book-info .title{
+  font-family: 'Roboto Slab', serif;
   font-size: 1.57vw;
   color: #121212;
 }
@@ -97,10 +106,12 @@ li{
 }
 
 .progress .progress-indicator {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.28vw;
 }
 
 .progress .status-indicator {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1vw;
 }
 
@@ -122,10 +133,12 @@ li{
 }
 
 .chapter .chap-head {
+  font-family: 'Roboto Slab', serif;
   font-size: 0.929vw;
 }
 
 .chapter .chap-progress {
+  font-family: 'Roboto Slab', serif;
   font-size: 1.14vw;
 }
 
