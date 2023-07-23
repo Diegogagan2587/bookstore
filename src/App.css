@@ -87,6 +87,8 @@ button {
   font-family: 'Roboto Slab', serif;
   font-size: 1.57vw;
   color: #121212;
+  margin-top: 0.285vw;
+  margin-bottom: 0;
 }
 
 .book-info .author {
@@ -94,10 +96,12 @@ button {
   font-weight: lighter;
   font-size: 1vw;
   color: #4386bf;
+  margin-bottom: 1.5vw;
 }
 
 .book-info .edit-info {
   display: flex;
+  width: 15.8vw;
 }
 
 .book-container .progress{
@@ -150,6 +154,7 @@ button {
 
 
 /*Remove below after Debuggin*/
+
 form {
   display: none;
 }
