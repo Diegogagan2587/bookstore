@@ -61,9 +61,6 @@ const booksSlice = createSlice({
 
       state.splice(0, state.length, ...arrayOFBooks);
     });
-    builder.addCase(postBooksToAPI.fulfilled, (state, action) => {
-
-    });
   },
 });
 
