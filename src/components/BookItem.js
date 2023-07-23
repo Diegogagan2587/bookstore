@@ -28,8 +28,8 @@ const BookItem = ({ itemProp }) => {
         <span className="status-indicator">Completed</span>
       </div>
       <div className="chapter">
-        <span>CURRENT CHAPTER</span>
-        <span>Chapter 17</span>
+        <span className="chap-head">CURRENT CHAPTER</span>
+        <span className="chap-progress">Chapter 17</span>
         <button type="button">UPDATE PROGRESS</button>
       </div>
     </li>

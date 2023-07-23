@@ -35,7 +35,7 @@ const InputBook = () => {
 
   return (
     <>
-      <h3>Add New Book</h3>
+      <h3 className="form-head">Add New Book</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
