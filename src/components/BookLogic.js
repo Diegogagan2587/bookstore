@@ -59,7 +59,6 @@ const BookLogic = () => {
   return (
     <>
       <BookList bookProps={books} setBooks={setBooks} delBook={delBook} />
-      <hr />
       <InputBook addBookItem={addBookItem} />
     </>
   );

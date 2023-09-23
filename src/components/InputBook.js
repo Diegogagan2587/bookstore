@@ -35,21 +35,23 @@ const InputBook = () => {
 
   return (
     <>
-      <h3>Add New Book</h3>
+      <h3 className="form-head">Add New Book</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Book Title"
           onChange={handleChangeTitle}
           value={title}
+          className="input-title"
         />
         <input
           type="text"
           placeholder="Author"
           onChange={handleChangeAuthor}
           value={author}
+          className="input-author"
         />
-        <button type="submit">Add Book</button>
+        <button type="submit" className="form-button">Add Book</button>
       </form>
       <span className="warning">{message}</span>
     </>

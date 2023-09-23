@@ -1,8 +1,49 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-family: 'Roboto Slab', serif;
+}
+
+.oval-container {
+  margin-left: 0.78vw;
+  margin-right: 0.78vw;
+}
+
+.oval-2 {
+  width: 4.85vw;
+  height: 4.85vw;
+  border-style: solid;
+  border-width: 5px;
+  border-image-slice: 1;
+  border-radius: 100%;
+  border-color: #0290ff;
+}
+
 /* ---- start Navigation ---- */
 .navigation {
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding-left: 7.14vw;
+  padding-right: 7.07vw;
+}
+
+.navigation .book-cms {
+  font-family: 'Montserrat', sans-serif;
+  color: #0290ff;
+  font-size: 2.14vw;
+  font-weight: bold;
 }
 
 .navigation ul {
@@ -11,13 +52,37 @@
   justify-content: space-evenly;
 }
 
+.navigation ul .nav-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 0.929vw;
+  color: #121212;
+}
+
+.navigation ul .nav-text:hover {
+  color: #12121280;
+}
+
 /* ---- start Navigation ---- */
 
 /* ---- start Book Item ---- */
+
+.book-list {
+  padding-left: 7.14vw;
+  padding-right: 7.14vw;
+  padding-top: 2.71vw;
+  background-color: #fafafa;
+}
+
 .book-container {
+  border: #e8e8e8 1px solid;
+  border-radius: 3px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding-top: 2.28vw;
+  padding-left: 1.92vw;
+  padding-bottom: 2vw;
+  margin-bottom: 1.25%;
 }
 
 .book-container .book-info {
@@ -26,18 +91,132 @@
   flex-direction: column;
 }
 
+.book-info .genre {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1vw;
+  color: #12121280;
+}
+
+.book-info .title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.57vw;
+  color: #121212;
+  margin-top: 0.285vw;
+  margin-bottom: 0;
+  width: 34vw;
+}
+
+.book-info .author {
+  font-family: 'Roboto Slab', serif;
+  font-weight: lighter;
+  font-size: 1vw;
+  color: #4386bf;
+  margin-bottom: 1.5vw;
+}
+
 .book-info .edit-info {
   display: flex;
+  width: 15.8vw;
 }
 
 .book-container .progress {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  border-right: 1px solid #e8e8e8;
+  padding-right: 1%;
+}
+
+.progress .progress-indicator {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.28vw;
+}
+
+.progress .status-indicator {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1vw;
+  color: #12121280;
+}
+
+.edit-info button {
+  border: 0;
+  background-color: inherit;
+  color: #4386bf;
+  font-size: 1vw;
+}
+
+.edit-info .center-button {
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
 }
 
 .book-container .chapter {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding-left: 4.21vw;
+}
+
+.chapter .chap-head {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.929vw;
+  color: #12121280;
+  margin-bottom: 0.5vw;
+}
+
+.chapter .chap-progress {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.14vw;
+  color: #121212;
+  margin-bottom: 2.13vw;
+}
+
+.chapter button {
+  font-size: 0.929vw;
+  width: 13.14vw;
+  color: #fff;
+  background-color: #0290ff;
+  border: 0;
+  padding: 0.5vw 1.357vw 0.57vw;
 }
 
 /* ---- Ends Book Item ---- */
+.form-head {
+  margin-top: 2vw;
+  color: #888;
+  padding-left: 7.14vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.42vw;
+}
+
+form {
+  padding-left: 4vw;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form input {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  font-size: 1.14vw;
+  padding: 1%;
+}
+
+form .input-title {
+  width: 47.42vw;
+}
+
+form .input-author {
+  width: 20.35vw;
+}
+
+.form-button {
+  width: 13vw;
+  color: #fff;
+  background-color: #0290ff;
+  border: 0;
+  border-radius: 2px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.92vw;
+}
